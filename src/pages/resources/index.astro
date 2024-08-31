@@ -44,7 +44,7 @@ const orderedPosts = tagOrder.flatMap((tag) => ({ tag, posts: postsByTag[tag] ||
 
 								<div class="flex flex-wrap justify-center gap-6">
 									{posts.map((post: any) => (
-										<div class="mb-4 w-1/4 max-w-xs flex-none" key={post.url}>
+										<div class="mb-4 w-1/4 max-w-xs flex-none" key={post.frontmatter.link}>
 											<Card post={post} />
 										</div>
 									))}

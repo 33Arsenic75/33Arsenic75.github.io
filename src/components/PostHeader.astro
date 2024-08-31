@@ -9,10 +9,6 @@ interface Props {
 	tags: string[];
 	minutesRead: string;
 	pubDate: string;
-	img: {
-		src: string;
-		alt: string;
-	};
 }
 
 const { title, pubDate, tags, minutesRead, img } = Astro.props;
@@ -29,7 +25,5 @@ const formattedDate = formatDate(pubDate);
 		<div class="text-sm">
 			<span>{formattedDate}</span> - <span>{minutesRead}</span>
 		</div>
-
-		{img.src ? <img src={img.src} alt={img.alt} /> : null}
 	</div>
 </Section>
