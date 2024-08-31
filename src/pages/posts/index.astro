@@ -1,0 +1,48 @@
+---
+import { AppConfig } from '@/utils/AppConfig';
+import Base from '@/layouts/Base.astro';
+import Section from '@/components/Section.astro';
+import Card from '@/components/Card.astro';
+import LargeCard from '@/components/LargeCard.astro'; // Import LargeCard component
+import Heading from '@/components/Heading.astro';
+import { sortPostsByDate } from '@/utils/data.util';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+
+const allPosts = await Astro.glob('./*.md');
+allPosts.sort(sortPostsByDate);
+
+// Get the latest two posts and the remaining posts
+const latestPosts = allPosts.slice(0, 2); // First two posts
+const olderPosts = allPosts.slice(2); // Remaining posts
+---
+
+<Base head={{ title, description }}>
+	<Section>
+		<Heading title="Latest Posts" />
+		<br />
+		<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+			{
+				latestPosts.map((post: any) => (
+					<div key={post.url} class="mb-4">
+						<LargeCard post={post} />
+					</div>
+				))
+			}
+		</div>
+	</Section>
+
+	<Section>
+		<Heading title="Older Posts" />
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+			{
+				olderPosts.map((post: any) => (
+					<div key={post.url} class="mb-4">
+						<Card post={post} />
+					</div>
+				))
+			}
+		</div>
+	</Section>
+</Base>

@@ -1,0 +1,24 @@
+---
+import { formatDate } from '@/utils/data.util';
+
+interface Props {
+	post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<a
+	href={post.frontmatter.url}
+	class="block h-auto w-full overflow-hidden rounded-lg bg-gray-100 p-4 shadow-md transition hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+	rel="noopener noreferrer"
+	target="_blank"
+>
+	<div class="flex items-center justify-between">
+		<h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">{post.frontmatter.title}</h3>
+		<p class="text-sm text-gray-700 dark:text-gray-300">{post.frontmatter.duration}</p>
+	</div>
+	<p class="text-sm text-gray-700 dark:text-gray-300">Professor: {post.frontmatter.professor}</p>
+	<p class="mt-2 text-sm text-gray-800 dark:text-gray-200">{post.frontmatter.description}</p>
+	<p class="text-blue-600 hover:underline dark:text-blue-400">Read more</p>
+</a>

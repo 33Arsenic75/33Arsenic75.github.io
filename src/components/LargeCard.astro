@@ -1,0 +1,29 @@
+---
+// LargeCard.astro
+export interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<a
+  href={post.url}
+  class="block h-auto w-full overflow-hidden rounded-lg bg-gray-100 p-8 shadow-lg transition hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+  style="min-height: 200px;"
+  Increased
+  height
+>
+  <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
+    {post.frontmatter.title}
+  </h2>
+  <p class="mt-4 text-sm text-white dark:text-white">
+    {post.frontmatter.author}
+  </p>
+  <p class="mt-4 text-sm text-gray-700 dark:text-gray-300">
+    {post.frontmatter.description}
+  </p>
+  <p class="mt-6 text-xs text-gray-500 dark:text-gray-400">
+    {post.frontmatter.date}
+  </p>
+</a>

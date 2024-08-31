@@ -1,0 +1,58 @@
+---
+import { AppConfig } from '@/utils/AppConfig';
+import Base from '@/layouts/Base.astro';
+import Section from '@/components/Section.astro';
+import Card from '@/components/ResourceCard.astro';
+import Heading from '@/components/Heading.astro';
+import { sortPostsByDate } from '@/utils/data.util';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+
+// Fetch and sort all posts
+const allPosts = await Astro.glob('./*.md');
+allPosts.sort(sortPostsByDate);
+
+// Group posts by tags
+const postsByTag = allPosts.reduce((acc, post) => {
+	post.frontmatter.tags.forEach((tag) => {
+		if (!acc[tag]) acc[tag] = [];
+		acc[tag].push(post);
+	});
+	return acc;
+}, {});
+
+// Define the desired order of tags
+const tagOrder = ['Courses', 'Competitive Programming', 'Others'];
+
+// Prepare the ordered posts array
+const orderedPosts = tagOrder.flatMap((tag) => ({ tag, posts: postsByTag[tag] || [] }));
+---
+
+<Base head={{ title, description }}>
+	<Section>
+		<Heading title="Resources" />
+	</Section>
+	<Section>
+		<div class="flex flex-col gap-6">
+			{
+				orderedPosts.map(
+					({ tag, posts }) =>
+						posts.length > 0 && (
+							<div key={tag}>
+								<h2 class="mb-6 text-center text-2xl font-bold">{tag}</h2>
+
+								<div class="flex flex-wrap justify-center gap-6">
+									{posts.map((post: any) => (
+										<div class="mb-4 w-1/4 max-w-xs flex-none" key={post.url}>
+											<Card post={post} />
+										</div>
+									))}
+								</div>
+							</div>
+						)
+				)
+			}
+		</div>
+	</Section>
+</Base>

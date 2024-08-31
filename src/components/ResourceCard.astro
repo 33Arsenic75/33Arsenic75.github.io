@@ -1,0 +1,25 @@
+---
+import { formatDate } from '@/utils/data.util';
+import Tags from './Tags.astro';
+interface Props {
+	post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<a
+	href={post.frontmatter.link}
+	target="_blank"
+	rel="noopener noreferrer"
+	class="w-70 block h-48 overflow-hidden rounded-xl bg-stone-200/50 from-orange-900 to-amber-700 p-[1px] shadow-md transition hover:bg-gradient-to-r hover:shadow-lg dark:bg-gray-900"
+	style="cursor: pointer;"
+>
+	<div
+		class="flex h-full w-full flex-col justify-between rounded-lg bg-stone-300 p-3 text-gray-900 dark:bg-stone-800 dark:text-white"
+	>
+		<p class="mb-1 line-clamp-1 text-sm font-semibold">{post.frontmatter.title}</p>
+		<p class="mt-2 text-xs text-gray-600 dark:text-gray-400">{post.frontmatter.author}</p>
+		<p class="mb-2 text-xs">{post.frontmatter.excerpt}</p>
+	</div>
+</a>
