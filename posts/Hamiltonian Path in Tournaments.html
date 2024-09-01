@@ -1498,7 +1498,7 @@ video {
 	}</style><script type="module" src="../src/layouts/Base.astro%3Fastro&amp;type=script&amp;index=0&amp;lang.ts"></script>
 <script type="module" src="../src/components/Navbar.astro%3Fastro&amp;type=script&amp;index=0&amp;lang.ts"></script>
 <script type="module" src="../@vite/client"></script>
-<script type="module" src="../@fs/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/node_modules/astro/dist/runtime/client/dev-toolbar/entrypoint.js%3Fv=26e345dd"></script>
+<script type="module" src="../@fs/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/node_modules/astro/dist/runtime/client/dev-toolbar/entrypoint.js%3Fv=a39dfb9c"></script>
 <script>window.__astro_dev_toolbar__ = {"root":"/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/","version":"4.15.1","debugInfo":"Astro                    v4.15.1\nNode                     v22.6.0\nSystem                   macOS (arm64)\nPackage Manager          npm\nOutput                   static\nAdapter                  @astrojs/vercel\nIntegrations             @astrojs/tailwind\n                         @astrojs/react\n                         @astrojs/sitemap\n                         @astrojs/vercel"}</script>
 <script>
 			window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -1538,28 +1538,28 @@ video {
 #Graph Theory </span></a><a href="http://localhost:4321/tags/Tournaments" data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/Tags.astro" data-astro-source-loc="18:47"><span class="mb-2 mr-2 rounded-xl bg-stone-600 px-3 py-1 text-xs font-bold uppercase text-white hover:bg-stone-500" data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/Tags.astro" data-astro-source-loc="14:121">
 #Tournaments </span></a> </div> </div> <div class="text-sm" data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/PostHeader.astro" data-astro-source-loc="25:24"> <span data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/PostHeader.astro" data-astro-source-loc="26:10">Sat, August 31, 2024</span> - <span data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/PostHeader.astro" data-astro-source-loc="26:41">9 min read</span> </div> </div>  </div> <div class="mx-auto w-full max-w-screen-lg px-4 py-6" data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/Section.astro" data-astro-source-loc="5:55">  <div class="content prose mt-8 max-w-none text-base leading-8 text-black dark:prose-invert prose-code:rounded-lg prose-code:bg-stone-800 prose-code:p-1 prose-code:text-orange-600 prose-img:rounded-lg prose-img:shadow-xl dark:text-white prose-img:dark:shadow-stone-800" data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/PostContent.astro" data-astro-source-loc="8:3"> <h1 id="definitions">Definitions</h1>
 <h2 id="tournament">Tournament</h2>
-<p>In graph theory, a <strong>tournament</strong> is a directed graph (digraph) where there is exactly one directed edge between every pair of vertices. In other words, for any two vertices <strong>u</strong> and <strong>v</strong>, either (<strong>u</strong> → <strong>v</strong>) or (<strong>v</strong> → <strong>u</strong>) is in the graph, <strong>but not both</strong>. Tournaments are used to model situations where each participant competes with every other participant exactly once, such as in round-robin tournaments in sports. Throughout the post, we will refer to a tournament with <strong>n</strong>  vertices and <strong>n(n-1)/2</strong> edges is known as a <strong>complete tournament graph</strong>.</p>
+<p>In graph theory, a <strong>Tournament</strong> is a directed graph (digraph) where there is exactly one directed edge between every pair of vertices. In other words, for any two vertices <strong>u</strong> and <strong>v</strong>, either (<strong>u</strong> → <strong>v</strong>) or (<strong>v</strong> → <strong>u</strong>) is in the graph, <strong>but not both</strong>. Tournaments are used to model situations where each participant competes with every other participant exactly once, such as in round-robin Tournaments in sports. Throughout the post, we will refer to a Tournament with <strong>n</strong>  vertices and <strong>n(n-1)/2</strong> edges is known as a <strong>complete Tournament graph</strong>.</p>
 <h2 id="hamiltonian-path">Hamiltonian Path</h2>
-<p>A <strong>Hamiltonian path</strong> in a graph is a path that visits each vertex exactly once. If such a path exists in a graph, the graph is called a <strong>Hamiltonian graph</strong>. Finding Hamiltonian paths is a common problem in graph theory and has applications in optimization and scheduling such as the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem"><strong>Travelling Salesman Problem(TSP)</strong></a>.</p>
+<p>A <strong>Hamiltonian Path</strong> in a graph is a path that visits each vertex exactly once. If such a path exists in a graph, the graph is called a <strong>Hamiltonian graph</strong>. Finding Hamiltonian Paths is a common problem in graph theory and has applications in optimization and scheduling such as the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem"><strong>Travelling Salesman Problem(TSP)</strong></a>.</p>
 <h4 id="np-completeness-of-finding-hamiltonian-paths">NP-Completeness of Finding Hamiltonian Paths</h4>
-<p>Finding Hamiltonian paths is classified as an NP-complete problem in <strong>general graphs</strong>. This classification means that no known polynomial-time algorithm can solve the problem for all instances.</p>
+<p>Finding Hamiltonian Paths is classified as an NP-complete problem in <strong>general graphs</strong>. This classification means that no known polynomial-time algorithm can solve the problem for all instances.</p>
 <h4 id="complexity-of-bfs-and-dfs-in-tournaments">Complexity of BFS and DFS in Tournaments</h4>
-<p>In contrast, for specific types of graphs, such as tournaments the problem of finding Hamiltonian paths can be approached more efficiently. Simple Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms on a tournament graph typically have a time complexity of O(V + E). For tournaments, where the number of edges E is O(n^2), this results in a time complexity of O(n^2). Thus the algorithm discussed here is even faster for finding hamiltonian path than the standard BFS and DFS algorithms for tournaments. We can also think of this as the algorithm doesn’t even need to think/process about all the edges.</p>
+<p>In contrast, for specific types of graphs, such as Tournaments the problem of finding Hamiltonian Paths can be approached more efficiently. Simple Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms on a Tournament graph typically have a time complexity of O(V + E). For Tournaments, where the number of edges E is O(n^2), this results in a time complexity of O(n^2). Thus the algorithm discussed here is even faster for finding hamiltonian path than the standard BFS and DFS algorithms for Tournaments. We can also think of this as the algorithm doesn’t even need to think/process about all the edges.</p>
 <h2 id="proving-the-existence-of-a-hamiltonian-path-in-tournaments">Proving the Existence of a Hamiltonian Path in Tournaments</h2>
-<p>To prove the existence of a Hamiltonian path in a tournament graph, we use induction on the number of vertices.</p>
+<p>To prove the existence of a Hamiltonian Path in a Tournament graph, we use induction on the number of vertices.</p>
 <h3 id="recursive-proof">Recursive Proof</h3>
 <ol>
 <li>
 <p><strong>Base Case:</strong></p>
 <ul>
-<li>For a tournament with a single vertex (n = 1), the path trivially exists as the vertex itself is a path.</li>
+<li>For a Tournament with a single vertex (n = 1), the path trivially exists as the vertex itself is a path.</li>
 </ul>
 </li>
 <li>
 <p><strong>Recursive Step:</strong></p>
 <ul>
-<li>Assume that for a tournament with <strong>k</strong> vertices, there exists a Hamiltonian path. We will prove that this property holds for a tournament with <strong>k+1</strong> vertices.</li>
-<li>Let <strong>v_1</strong>, <strong>v_2</strong>, …, <strong>v_k</strong> be the hamiltonian path <strong>P</strong> of the tournament graph <strong>T</strong> with <strong>k</strong> vertices (if not, then just rename the vertices). When we add another vertex <strong>v</strong> to the graph, we need to show that there exists a Hamiltonian path in the new graph with <strong>k+1</strong> vertices.</li>
+<li>Assume that for a Tournament with <strong>k</strong> vertices, there exists a Hamiltonian Path. We will prove that this property holds for a Tournament with <strong>k+1</strong> vertices.</li>
+<li>Let <strong>v_1</strong>, <strong>v_2</strong>, …, <strong>v_k</strong> be the hamiltonian path <strong>P</strong> of the Tournament graph <strong>T</strong> with <strong>k</strong> vertices (if not, then just rename the vertices). When we add another vertex <strong>v</strong> to the graph, we need to show that there exists a Hamiltonian Path in the new graph with <strong>k+1</strong> vertices.</li>
 </ul>
 </li>
 <li>
@@ -1567,12 +1567,12 @@ video {
 <ul>
 <li><strong>Case 1:</strong>
 <ul>
-<li>If <strong>v</strong> has edges to <strong>v_1</strong>, then <strong>v</strong> can be placed at the beginning  <strong>P</strong>, forming a Hamiltonian path. Similarly if <strong>v</strong> has edges from <strong>v_k</strong>, then <strong>v</strong> can be placed at the end of <strong>P</strong> to form a Hamiltonian path.</li>
+<li>If <strong>v</strong> has edges to <strong>v_1</strong>, then <strong>v</strong> can be placed at the beginning  <strong>P</strong>, forming a Hamiltonian Path. Similarly if <strong>v</strong> has edges from <strong>v_k</strong>, then <strong>v</strong> can be placed at the end of <strong>P</strong> to form a Hamiltonian Path.</li>
 </ul>
 </li>
 <li><strong>Case 2:</strong>
 <ul>
-<li>This occurs if and only if <strong>v</strong> has an edge from <strong>v_1</strong> AND an edge to <strong>v_k</strong>. Think about this carefully and convince yourself that this is the only possibility. So how do we handle this possibility ? We can insert <strong>v</strong> between <strong>v_i</strong> and <strong>v_i+1</strong> for some <strong>i</strong> such that <strong>v_i</strong> has an edge to <strong>v</strong> and <strong>v_i+1</strong> has an edge from <strong>v</strong>. This insertion will not break the Hamiltonian path <strong>P</strong>. But how do we guarantee that such an <strong>i</strong> exists ?  Since <strong>v</strong> has an edge from <strong>v_1</strong> and an edge to <strong>v_k</strong>, there must be a vertex <strong>v_i</strong> and  <strong>v_i+1</strong> such that the direction of edges from <strong>v_i</strong> and <strong>v_i+1</strong> toward <strong>v</strong> is different.Think about this <strong>switching of direction of edge</strong> very carefully and convince yourself it is true, as this will be the crux of our optimization. Thus we can insert <strong>v</strong> between <strong>v_i</strong> and <strong>v_i+1</strong> to form a Hamiltonian path.</li>
+<li>This occurs if and only if <strong>v</strong> has an edge from <strong>v_1</strong> AND an edge to <strong>v_k</strong>. Think about this carefully and convince yourself that this is the only possibility. So how do we handle this possibility ? We can insert <strong>v</strong> between <strong>v_i</strong> and <strong>v_i+1</strong> for some <strong>i</strong> such that <strong>v_i</strong> has an edge to <strong>v</strong> and <strong>v_i+1</strong> has an edge from <strong>v</strong>. This insertion will not break the Hamiltonian Path <strong>P</strong>. But how do we guarantee that such an <strong>i</strong> exists ?  Since <strong>v</strong> has an edge from <strong>v_1</strong> and an edge to <strong>v_k</strong>, there must be a vertex <strong>v_i</strong> and  <strong>v_i+1</strong> such that the direction of edges from <strong>v_i</strong> and <strong>v_i+1</strong> toward <strong>v</strong> is different.Think about this <strong>switching of direction of edge</strong> very carefully and convince yourself it is true, as this will be the crux of our optimization. Thus we can insert <strong>v</strong> between <strong>v_i</strong> and <strong>v_i+1</strong> to form a Hamiltonian Path.</li>
 </ul>
 </li>
 </ul>
@@ -1580,37 +1580,37 @@ video {
 <li>
 <p><strong>Conclusion:</strong></p>
 <ul>
-<li>By inserting <strong>v</strong> into <strong>P</strong> appropriately, we ensure that the new graph <strong>T</strong> with <strong>k+1</strong> vertices also contains a Hamiltonian path. This completes the induction step.</li>
+<li>By inserting <strong>v</strong> into <strong>P</strong> appropriately, we ensure that the new graph <strong>T</strong> with <strong>k+1</strong> vertices also contains a Hamiltonian Path. This completes the induction step.</li>
 </ul>
 </li>
 </ol>
-<p>Thus, by induction, we have proved that every tournament graph with <strong>n</strong> vertices contains a Hamiltonian path.</p>
+<p>Thus, by induction, we have proved that every Tournament graph with <strong>n</strong> vertices contains a Hamiltonian Path.</p>
 <h2 id="naive-on2--algorithm-for-finding-a-hamiltonian-path">Naive O(n^2)  Algorithm for Finding a Hamiltonian Path</h2>
-<p>In tournament graphs, finding a Hamiltonian path can be done efficiently using a naive O(n^2)  approach.
-The naive algorithm for finding a Hamiltonian path in a tournament graph operates as follows:</p>
+<p>In Tournament graphs, finding a Hamiltonian Path can be done efficiently using a naive O(n^2)  approach.
+The naive algorithm for finding a Hamiltonian Path in a Tournament graph operates as follows:</p>
 <ol>
 <li>
 <p><strong>Base Case:</strong></p>
 <ul>
-<li>For a tournament with a single vertex (( n = 1 )), the path trivially exists as the vertex itself is a Hamiltonian path.</li>
+<li>For a Tournament with a single vertex (( n = 1 )), the path trivially exists as the vertex itself is a Hamiltonian Path.</li>
 </ul>
 </li>
 <li>
 <p><strong>Find Hamiltonian Path for ( n-1 ) Vertices:</strong></p>
 <ul>
-<li>For  n > 1 , start by finding a Hamiltonian path in the subgraph with n-1 vertices. This is done recursively.</li>
+<li>For  n > 1 , start by finding a Hamiltonian Path in the subgraph with n-1 vertices. This is done recursively.</li>
 </ul>
 </li>
 <li>
 <p><strong>Insert the ( n )th Vertex:</strong></p>
 <ul>
-<li>Once a Hamiltonian path for  n-1  vertices is identified, try inserting the ( n )th vertex at every possible position in the graph, ie between every 2 consecutive vertices and before and after the first and last vertex. Check if inserting the vertex maintains the path’s property of visiting all vertices exactly once. If a valid insertion is found, return the Hamiltonian path.</li>
+<li>Once a Hamiltonian Path for  n-1  vertices is identified, try inserting the ( n )th vertex at every possible position in the graph, ie between every 2 consecutive vertices and before and after the first and last vertex. Check if inserting the vertex maintains the path’s property of visiting all vertices exactly once. If a valid insertion is found, return the Hamiltonian Path.</li>
 </ul>
 </li>
 </ol>
 <h3 id="time-complexity">Time Complexity</h3>
 <ul>
-<li>Finding a Hamiltonian path in n vertices is T(n).</li>
+<li>Finding a Hamiltonian Path in n vertices is T(n).</li>
 <li>Inserting and checking the  n th vertex involves O(n) additional operations.</li>
 </ul>
 <p>The recurrence relation for the time complexity T(n) of this naive algorithm is given by:</p>
@@ -1619,9 +1619,9 @@ The naive algorithm for finding a Hamiltonian path in a tournament graph operate
  </div>
 <p>By solving this recurrence relation, we find that the total time complexity of the naive algorithm is O(n^2).</p>
 <h1 id="side-quest">Side Quest</h1>
-<p>Before we delve into the optimized algorithm, let’s us solve a different problem, which has nothing to do with graphs. And use the learnings from this problem to optimize our algorithm for finding Hamiltonian paths in tournaments.</p>
+<p><strong>Before we delve into the optimized algorithm, let’s us solve a different problem, which has nothing to do with graphs. And use the learnings from this problem to optimize our algorithm for finding Hamiltonian Paths in Tournaments.</strong></p>
 <h3 id="problem-statement">Problem Statement</h3>
-<p>Consider an array of <strong>n</strong> distinct integers. We need to a local minimas in the array. A local minima is defined as an element in the array which is less than its neighbors.</p>
+<p>Consider an array of <strong>n</strong> distinct integers. We need to find a local minima in the array. A local minima is defined as an element in the array which is less than its neighbors.</p>
 <p>Since this obviously has an O(n) solution, we will not be discussing the solution here. But we will discuss O(log(n)) solution for this problem.</p>
 <h3 id="solution">Solution</h3>
 <p>To find a local minima in O(log n) time, we can use a binary search-based approach. Here’s a step-by-step explanation:</p>
@@ -1667,16 +1667,16 @@ The naive algorithm for finding a Hamiltonian path in a tournament graph operate
 </li>
 </ul>
 <h3 id="take-away">Take Away</h3>
-<p>We check for some condition at the middle element and based on that information we decide whether to search in the left half or right half. This is the key idea we will use to optimize our algorithm for finding Hamiltonian paths in tournaments.</p>
+<p>We check for some condition at the middle element and based on that information we decide whether to search in the left half or right half. This is the key idea we will use to optimize our algorithm for finding Hamiltonian Paths in Tournaments.</p>
 <p>So whenever we are applying this idea,we must ensure that a valid solution always exists in the subspace we are going to search, based on the information we have at the middle element. Make sure you understand this idea of guaranteeing a valid solution in the subspace we are going to search, from the information we gather by checking at the mid point.</p>
 <h1 id="optimization">Optimization</h1>
-<p>So recall the algorithm we discussed earlier for finding Hamiltonian paths in tournaments. Before we optimize the algorithm, we must ask ourselves, what part of the algorithm can be improved ?? One idea might be to solve the problem for 2 graphs with n/2 vertices and some how join these 2 solutions to get the solution for n vertices. We encourage the reader to think why this idea is not fruitful (or if it is please write to me on my email).</p>
+<p>So recall the algorithm we discussed earlier for finding Hamiltonian Paths in Tournaments. Before we optimize the algorithm, we must ask ourselves, what part of the algorithm can be improved ?? One idea might be to solve the problem for 2 graphs with n/2 vertices and some how join these 2 solutions to get the solution for n vertices. We encourage the reader to think why this idea is not fruitful (or if it is please write to me on my email).</p>
 <p>Another optimization one might think of is, how to quickly find the 2 vertices <strong>v_i</strong> and <strong>v_i+1</strong> between which we insert the latest verted <strong>v</strong>. If the subcase 1 follows, where <strong>v</strong> is inserted either at the front or back of the path, then it is already optimized as O(1). So we only need to think how to optimize the subcase 2, where <strong>v</strong> is inserted between 2 vertices.</p>
 <h3 id="idea">Idea</h3>
 <p>Since it is already subcase 2, we know that <strong>v_1</strong> has an edge towards <strong>v</strong> and <strong>v</strong> has an edge towards <strong>v_2</strong>. Let i=⌊n/2​⌋ and check if <strong>v_i</strong> and <strong>v_i+1</strong> is feasible. If it is, we are done, if not we focus our search on one of the halves (<strong>v_1</strong> and <strong>v_i</strong>) or (<strong>v_i+1</strong> and <strong>v_n</strong>). The halve we choose is the half, were both the end points have edges to <strong>v</strong> going in different directions. One such half will always exist. This is the key idea, by which we are guaranteed that a solution exists in the half we choose, because of the information we have at the middle element. Readers might see the similarity between this idea and the idea we discussed in the side quest.</p>
 <h3 id="time-complexity-1">Time Complexity</h3>
 <ul>
-<li>Finding a Hamiltonian path in n vertices is T(n).</li>
+<li>Finding a Hamiltonian Path in n vertices is T(n).</li>
 <li>Inserting and checking the  n th vertex involves O(logn) additional operations.</li>
 </ul>
 <p>The recurrence relation for the time complexity T(n) of this naive algorithm is given by:</p>
@@ -1685,6 +1685,6 @@ The naive algorithm for finding a Hamiltonian path in a tournament graph operate
  </div>
 <p>By solving this recurrence relation, we find that the total time complexity of the naive algorithm is O(nlog(n)).</p>
 <h1 id="side-quest-ii">Side Quest II</h1>
-<p>Read this only after you think you have understood the optimization we did for finding Hamiltonian paths in tournaments.
+<p>Read this only after you think you have understood the optimization we did for finding Hamiltonian Paths in Tournaments.
 In this, we discuss about some of the questions I had about the optimization we did. The main question which arises is what is the data structure we will use  to store the ordering the path ? We can use a linked list, but then the time complexity of accesing the middle vertex will be O(n). If we use a vector/array, we can access the middle element in O(1), but then the time complexity of inserting the vertex will be O(n). So which data structure should we use ?? To solve this problem, a data structure similar to a linked list with additional bookkeeping is required. The full solution is beyond the scope of this article, but if you’re interested in solving it, you can refer to <a href="https://cis.temple.edu/~wu/teaching/Spring2022/adversary-supplement-2.pdf">this solution</a>.</p> </div>  </div>  </div>  </div> <div class="mx-auto w-full max-w-screen-lg px-4 py-6" data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/Section.astro" data-astro-source-loc="5:55">  <footer class="text-center" data-astro-source-file="/Users/abhinavshripad/Desktop/33Arsenic75.github.io/data/src/components/Footer.astro" data-astro-source-loc="8:30"> <!-- © {year.getFullYear()} - <a class="underline hover:text-orange-600" href="/imprint/">Imprint</a> - made with
 		♥️ by <a class="underline hover:text-orange-600" href="http://nicdun.dev" target="_blank">nicdun.dev</a>  --> </footer>  </div> </body></html>
